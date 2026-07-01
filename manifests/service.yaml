@@ -1,0 +1,41 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbz-svc
+  labels: 
+    app: dbz
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: dbz
+  
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: op-svc
+  labels: 
+    app: op
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: op
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: yyh-svc
+  labels: 
+    app: yyh
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: yyh

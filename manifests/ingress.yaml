@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: amazon-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: /dbz
+        backend:
+          service:
+            name: dbz-svc
+            port: 
+             number: 80
+      - pathType: Prefix
+        path: /op
+        backend:
+          service:
+            name: op-svc
+            port: 
+             number: 80
+      - pathType: Prefix
+        path: /yyh
+        backend:
+          service:
+            name: yyh-svc
+            port: 
+             number: 80
+      
