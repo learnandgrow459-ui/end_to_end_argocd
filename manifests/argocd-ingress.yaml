@@ -7,7 +7,8 @@ metadata:
 
 spec:
   ingressClassName: nginx
-
+  tls:
+  - secretName: secret-tls-argocd
   rules:
   - http:
       paths:
